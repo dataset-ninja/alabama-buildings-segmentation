@@ -13,37 +13,37 @@ from dataset_tools.templates import (
 ##################################
 # * Before uploading to instance #
 ##################################
-PROJECT_NAME: str = None
-PROJECT_NAME_FULL: str = None
+PROJECT_NAME: str = "Alabama Buildings Segmentation"
+PROJECT_NAME_FULL: str = "Alabama Buildings Segmentation"
 HIDE_DATASET = True  # set False when 100% sure about repo quality
 
 ##################################
 # * After uploading to instance ##
 ##################################
-LICENSE: License = None
-APPLICATIONS: List[Union[Industry, Domain, Research]] = None
-CATEGORY: Category = None
+LICENSE: License = License.Unknown()
+APPLICATIONS: List[Union[Industry, Domain, Research]] = [Domain.Geospatial(is_used=False), Industry.Environmental(is_used=False)]
+CATEGORY: Category = Category.Satellite()
 
-CV_TASKS: List[CVTask] = None
-ANNOTATION_TYPES: List[AnnotationType] = None
+CV_TASKS: List[CVTask] = [CVTask.InstanceSegmentation(),CVTask.SemanticSegmentation(),CVTask.ObjectDetection()]
+ANNOTATION_TYPES: List[AnnotationType] = [AnnotationType.InstanceSegmentation()]
 
 RELEASE_DATE: Optional[str] = None  # e.g. "YYYY-MM-DD"
 if RELEASE_DATE is None:
-    RELEASE_YEAR: int = None
+    RELEASE_YEAR: int = 2022
 
-HOMEPAGE_URL: str = None
+HOMEPAGE_URL: str = "https://www.kaggle.com/datasets/meowmeowplus/alabama-buildings-segmentation"
 # e.g. "https://some.com/dataset/homepage"
 
 PREVIEW_IMAGE_ID: int = None
 # This should be filled AFTER uploading images to instance, just ID of any image.
 
-GITHUB_URL: str = None
+GITHUB_URL: str = "https://github.com/dataset-ninja/massachusetts-buildings"
 # URL to GitHub repo on dataset ninja (e.g. "https://github.com/dataset-ninja/some-dataset")
 
 ##################################
 ### * Optional after uploading ###
 ##################################
-DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = None
+DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = ["https://www.kaggle.com/datasets/meowmeowplus/alabama-buildings-segmentation"]
 # Optional link for downloading original dataset (e.g. "https://some.com/dataset/download")
 
 CLASS2COLOR: Optional[Dict[str, List[str]]] = None
@@ -56,7 +56,7 @@ BLOGPOST: Optional[Union[str, List[str], Dict[str, str]]] = None
 REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = None
 
 CITATION_URL: Optional[str] = None
-AUTHORS: Optional[List[str]] = None
+AUTHORS: Optional[List[str]] = ["Duy Cao"]
 
 ORGANIZATION_NAME: Optional[Union[str, List[str]]] = None
 ORGANIZATION_URL: Optional[Union[str, List[str]]] = None
