@@ -1,0 +1,1 @@
+License is unknown for the Alabama Buildings Segmentation dataset.
