@@ -1,3 +1,3 @@
 **Alabama Buildings Segmentation** dataset is the combination of BingMap satellite images and masks from [Microsoft Maps](https://github.com/microsoft/USBuildingFootprints). It is almost from Alabama, US (99%). Others from Columbia. Dataset contains 10200 satellite images and 10200 masks with weight ~ 17Gb. The satellite images from this dataset have resolution 0.5m/pixel, image size 1024x1024, ~1.5Mb/image. Dataset only contains pictures that have the total area of builbuilding in mask >= 1% area of that pictures. It means there are no images that do not have any building in this dataset.
 
-<i>Please note, that we detected some wrong masks.</i>
+<i>Please note, that we detected some wrong masks (f.e. '10.png').</i>
